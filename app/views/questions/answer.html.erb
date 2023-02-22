@@ -1,0 +1,29 @@
+
+<h1 class="title">Stupid Coaching</h1>
+
+    <%= "- You:" %></p>
+    <%= @answer %></p>
+
+    <%= "- Your coach:" %></p>
+    <% if params[:question].downcase == "i am going to work right now" %>
+      <p><%= "Great" %></p>
+    <% elsif params[:question][-1] == "?" %>
+    <%# elsif params[:question].end_with?("?") ==> É outra forma de pegar o último caractere%>
+      <p><%= "Silly question, get dressed and go to work!" %></p>
+    <% else %>
+      <p><%= "I don't care, get dressed and go to work!" %></p>
+    <% end %>
+
+
+  <a href=""><%= link_to "Ask a new question", ask_path %></a>
+
+
+
+
+
+
+
+x
+<%# If the message is I am going to work, the coach will answer Great!
+If the message has a question mark ? at the end, the coach will answer Silly question, get dressed and go to work!.
+Otherwise the coach will answer I don't care, get dressed and go to work! %>
